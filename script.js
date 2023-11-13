@@ -7,6 +7,8 @@ menuBtn.addEventListener("click", () => {
 });
 
 const btns = document.querySelectorAll(".nav-btn");
+const desktopSlides = document.querySelectorAll(".desktop-view .image-slide");
+const mobileSlides = document.querySelectorAll(".mobile-view .image-slide");
 const slides = document.querySelectorAll(".image-slide");
 
 var sliderNav = function (manual) {
@@ -14,12 +16,17 @@ var sliderNav = function (manual) {
         btn.classList.remove("active");
     });
 
-    slides.forEach((slide) => {
+    desktopSlides.forEach((slide) => {
         slide.classList.remove("active");
-    })
+    });
+
+    mobileSlides.forEach((slide) => {
+        slide.classList.remove("active");
+    });
 
     btns[manual].classList.add("active");
-    slides[manual].classList.add("active");
+    desktopSlides[manual].classList.add("active");
+    mobileSlides[manual].classList.add("active");
 }
 
 btns.forEach((btn, i) => {
@@ -31,11 +38,11 @@ btns.forEach((btn, i) => {
 var allFilters = document.querySelectorAll('.gallery-content .btns li.btn');
 var allCards = document.querySelectorAll('.mainContainer .gallery div.card');
 
-for(var i = 0; i < allFilters.length; i++){
+for (var i = 0; i < allFilters.length; i++) {
     allFilters[i].addEventListener('click', myFunction);
 }
 
-function myFunction(){
+function myFunction() {
     var currentTab = document.querySelector('.gallery-content .btns .active');
     currentTab.classList.remove('active');
 
@@ -43,19 +50,19 @@ function myFunction(){
 
     var filter = this.getAttribute('data-filter');
 
-    if(filter != 'all'){
-        for(let i = 0; i < allCards.length; i++){
+    if (filter != 'all') {
+        for (let i = 0; i < allCards.length; i++) {
             allCards[i].classList.add('hide');
             allCards[i].classList.remove('active');
 
             var currentItem = allCards[i].getAttribute('data-item');
-            if(currentItem == filter){
+            if (currentItem == filter) {
                 allCards[i].classList.add('active');
                 allCards[i].classList.remove('hide');
             }
         }
-    }else{
-        for(let i = 0; i < allCards.length; i++){
+    } else {
+        for (let i = 0; i < allCards.length; i++) {
             allCards[i].classList.remove('hide');
             allCards[i].classList.add('active');
         }
