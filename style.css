@@ -196,7 +196,7 @@ section {
     justify-content: center;
     flex-direction: column;
     background: #2696E9;
-    background: url(./images/kg.jpg);
+    background: url(./images/kg.jpeg);
     background-size: cover;
     background-position: center;
     overflow-x: hidden;
@@ -280,6 +280,7 @@ section {
 
 .faq {
     max-width: 700px;
+    min-width: 700px;
     margin-top: 2rem;
     padding-bottom: 1rem;
     border-bottom: 2px solid #fff;
@@ -298,8 +299,20 @@ section {
 
 .answer {
     max-height: 0;
-    overflow: hidden;
+    overflow-y: auto;
     transition: max-height 1.4s ease;
+
+    /* Make scrollbar transparent */
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+.answer::-webkit-scrollbar {
+    width: 12px; /* adjust as needed */
+}
+
+.answer::-webkit-scrollbar-thumb {
+    background-color: transparent;
 }
 
 .answer p {
@@ -471,7 +484,7 @@ svg {
 }
 
 .card:hover .imgBox img {
-    opacity: 0.3;
+    background: transparent;
     cursor: pointer;
 
 }
@@ -926,6 +939,7 @@ svg {
     .faq {
         padding-left: 10px;
         padding-right: 10px;
+        min-width: 0;
     }
 
     .question h3 {
