@@ -932,7 +932,7 @@ svg {
     }
 
     .home .content h1 span {
-        font-size: 0.5em;
+        font-size: 0.44em;
         transition: 0.3s ease;
     }
 
@@ -947,7 +947,7 @@ svg {
     }
 
     .question h3 {
-        font-size: 1.3rem;
+        font-size: 1.0rem;
     }
 
     .answer p {
