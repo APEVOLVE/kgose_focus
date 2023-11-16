@@ -2,7 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
 }
 
 header {
@@ -118,7 +122,7 @@ section {
 .home .media-icons {
     z-index: 888;
     position: absolute;
-    right: 30px;
+    right: 20px;
     display: flex;
     flex-direction: column;
     transition: 0.5s ease;
@@ -216,7 +220,7 @@ section {
 .galleryBackground .media-icons {
     z-index: 888;
     position: absolute;
-    right: 30px;
+    right: 20px;
     display: flex;
     flex-direction: column;
     transition: 0.5s ease;
@@ -866,7 +870,7 @@ svg {
     }
 
     .home .media-icons {
-        right: 15px;
+        right: 20px;
     }
 
     header .navigation {
